@@ -1,0 +1,44 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count
+------  -------
+all           1
+blastp      227
+total       228
+
+Select jobs to execute...
+
+[Tue Mar 12 06:17:39 2024]
+rule blastp:
+    input: ../blast_info/fasta_split_1000/batch_123.fasta
+    output: ../blast_info/blastp_result/batch_123.csv
+    jobid: 28
+    reason: Missing output files: ../blast_info/blastp_result/batch_123.csv
+    wildcards: sample=batch_123
+    resources: tmpdir=/tmp
+
+
+        echo ../blast_info/fasta_split_1000/batch_123.fasta
+        blastp -query ../blast_info/fasta_split_1000/batch_123.fasta -db /mnt/blastdb_tmpfs/nr.blastdb/nr.blastdb -out ../blast_info/blastp_result/batch_123.csv -task blastp-fast -outfmt "10 qseqid stitle sseqid pident evalue" -max_target_seqs 10 -num_threads 250
+        
+[Tue Mar 12 06:43:43 2024]
+Finished job 28.
+1 of 228 steps (0.4%) done
+Select jobs to execute...
+
+[Tue Mar 12 06:43:43 2024]
+rule blastp:
+    input: ../blast_info/fasta_split_1000/batch_178.fasta
+    output: ../blast_info/blastp_result/batch_178.csv
+    jobid: 88
+    reason: Missing output files: ../blast_info/blastp_result/batch_178.csv
+    wildcards: sample=batch_178
+    resources: tmpdir=/tmp
+
+
+        echo ../blast_info/fasta_split_1000/batch_178.fasta
+        blastp -query ../blast_info/fasta_split_1000/batch_178.fasta -db /mnt/blastdb_tmpfs/nr.blastdb/nr.blastdb -out ../blast_info/blastp_result/batch_178.csv -task blastp-fast -outfmt "10 qseqid stitle sseqid pident evalue" -max_target_seqs 10 -num_threads 250
+        
