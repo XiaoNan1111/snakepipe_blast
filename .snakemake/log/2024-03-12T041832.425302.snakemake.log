@@ -1,5 +1,0 @@
-TypeError in file /data_disk/user/xiaonan/2.project/2024_Cas-mining_topic/snakepipes_Cas-mining/meta_step.04.blastp_Snakefile.py, line 15:
-can only concatenate str (not "list") to str
-  File "/data_disk/user/xiaonan/2.project/2024_Cas-mining_topic/snakepipes_Cas-mining/meta_step.04.blastp_Snakefile.py", line 35, in <module>
-  File "/data_disk/user/xiaonan/2.project/2024_Cas-mining_topic/snakepipes_Cas-mining/meta_step.04.blastp_Snakefile.py", line 15, in print_head
-  File "/data_disk/user/xiaonan/2.project/2024_Cas-mining_topic/snakepipes_Cas-mining/meta_step.04.blastp_Snakefile.py", line 15, in <listcomp>
