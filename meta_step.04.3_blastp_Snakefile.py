@@ -67,7 +67,8 @@ rule blastp:
     output:
         "../blast_info/blastp_result/{sample}.csv"
     params:
-        db="/mnt/blastdb_tmpfs/nr.blastdb/nr.blastdb",
+        # db="/mnt/blastdb_tmpfs/nr.blastdb/nr.blastdb",
+        db='/dev/shm/blastdb_tmpfs/nr.blastdb/nr.blastdb',
         # out="../blast_info/blastp_result/{sample}.csv",
         mode="blastp-fast",
         fmt="10 qseqid stitle sseqid pident evalue",
